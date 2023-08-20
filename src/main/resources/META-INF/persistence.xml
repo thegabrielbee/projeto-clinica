@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+
+    <persistence-unit name="BancoPU">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <properties>
+            <!-- Configurações de conexão -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/clinica"/>
+            <property name="javax.persistence.jdbc.user" value="gabriel_clinica"/>
+            <property name="javax.persistence.jdbc.password" value="123"/>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+
+            <!-- Configurações do Hibernate -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="hibernate.show_sql" value="true"/> <!-- Mostra SQL gerado -->
+            <property name="hibernate.format_sql" value="true"/> <!-- Formata o SQL gerado -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/> <!-- Atualiza o schema automaticamente -->
+
+            <!-- Outras configurações -->
+        </properties>
+    </persistence-unit>
+</persistence>
